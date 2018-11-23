@@ -3,23 +3,25 @@ import ReactDOM from 'react-dom'
 
 const App = () => {
     const kurssi = 'Half Stack -sovelluskehitys'
-    const osa1 = {
-      nimi: 'Reactin perusteet',
-      tehtavia: 10
-    }
-    const osa2 = {
-      nimi: 'Tiedonvälitys propseilla',
-      tehtavia: 7
-    }
-    const osa3 = {
-      nimi: 'Komponenttien tila',
-      tehtavia: 14
-    }
+    const osat = [
+        {
+          nimi: 'Reactin perusteet',
+          tehtavia: 10
+        },
+        {
+          nimi: 'Tiedonvälitys propseilla',
+          tehtavia: 7
+        },
+        {
+          nimi: 'Komponenttien tila',
+          tehtavia: 14
+        }
+      ]
     return (
       <div>
         <Otsikko kurssi={kurssi} />
-        <Sisalto osa1={osa1.nimi} tehtavia1={osa1.tehtavia} osa2={osa2.nimi} tehtavia2={osa2.tehtavia} osa3={osa3.nimi} tehtavia3={osa3.tehtavia} />
-        <Yhteensa tehtavia1={osa1.tehtavia} tehtavia2={osa2.tehtavia} tehtavia3={osa3.tehtavia} />
+        <Sisalto osa1={osat[0].nimi} tehtavia1={osat[0].tehtavia} osa2={osat[1].nimi} tehtavia2={osat[1].tehtavia} osa3={osat[2].nimi} tehtavia3={osat[2].tehtavia} />
+        <Yhteensa tehtavia1={osat[0].tehtavia} tehtavia2={osat[1].tehtavia} tehtavia3={osat[2].tehtavia} />
       </div>
     )
 }
