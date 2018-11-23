@@ -1,1 +1,1 @@
-FullStackOpen2018_osa1_tehtavat_1.1-1.5
+FullStackOpen2018_osa1
