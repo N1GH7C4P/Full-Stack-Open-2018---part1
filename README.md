@@ -1,1 +1,1 @@
-# Full-Stack-Open-2018---part1
+FullStackOpen2018_osa1_tehtavat_1.1-1.5
