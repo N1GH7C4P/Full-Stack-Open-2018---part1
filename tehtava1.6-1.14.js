@@ -44,23 +44,25 @@ class App extends React.Component {
           <div>
             <h1>Statistics</h1>
             <table>
-              <tr>
-                <td>Positiivisia: </td>
-                <td>{this.state.pos}</td>
-              </tr>
-              <tr>
-                <td>Negatiivisia: </td>
-                <td>{this.state.neg}</td>
-              </tr><tr>
-                <td>Neutraaleja: </td>
-                <td>{this.state.neut}</td>
-              </tr><tr>
-                <td>Keskiarvo: </td>
-                <td>{(this.state.pos - this.state.neg) / (this.state.pos + this.state.neg + this.state.neut)}</td>
-              </tr><tr>
-                <td>Positiivisten osuus: </td>
-                <td>{this.state.pos / (this.state.pos + this.state.neg + this.state.neut)*100}</td>
-              </tr>
+              <tbody>
+                <tr>
+                  <td>Positiivisia: </td>
+                  <td>{this.state.pos}</td>
+                </tr>
+                <tr>
+                  <td>Negatiivisia: </td>
+                  <td>{this.state.neg}</td>
+                </tr><tr>
+                  <td>Neutraaleja: </td>
+                  <td>{this.state.neut}</td>
+                </tr><tr>
+                  <td>Keskiarvo: </td>
+                  <td>{(this.state.pos - this.state.neg) / (this.state.pos + this.state.neg + this.state.neut)}</td>
+                </tr><tr>
+                  <td>Positiivisten osuus: </td>
+                  <td>{this.state.pos / (this.state.pos + this.state.neg + this.state.neut)*100}</td>
+                </tr>
+              </tbody>
             </table>
           </div>
         )
