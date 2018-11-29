@@ -27,9 +27,7 @@ class App extends React.Component {
   }
 
   render() {
-
-    const Statistic = ({ text, counter }) => <div>{text} {counter}</div>
-
+    
     const Button = ({ handleClick, text }) => (
 
       <button onClick={handleClick}>
@@ -45,15 +43,30 @@ class App extends React.Component {
         return(
           <div>
             <h1>Statistics</h1>
-            <Statistic counter={this.state.pos} text="Positiivisia: "/>
-            <Statistic counter={this.state.neut} text="Negatiivisia: "/>
-            <Statistic counter={this.state.neg} text="Neutraaleja: "/>
-            <Statistic counter={(this.state.pos - this.state.neg) / (this.state.pos + this.state.neg + this.state.neut)} text= "Keskiarvo: "/>
-            <Statistic counter={this.state.pos / (this.state.pos + this.state.neg + this.state.neut)*100} text= "Positiivisten osuus: "/>
+            <table>
+              <tr>
+                <td>Positiivisia: </td>
+                <td>{this.state.pos}</td>
+              </tr>
+              <tr>
+                <td>Negatiivisia: </td>
+                <td>{this.state.neg}</td>
+              </tr><tr>
+                <td>Neutraaleja: </td>
+                <td>{this.state.neut}</td>
+              </tr><tr>
+                <td>Keskiarvo: </td>
+                <td>{(this.state.pos - this.state.neg) / (this.state.pos + this.state.neg + this.state.neut)}</td>
+              </tr><tr>
+                <td>Positiivisten osuus: </td>
+                <td>{this.state.pos / (this.state.pos + this.state.neg + this.state.neut)*100}</td>
+              </tr>
+            </table>
           </div>
         )
       }
     }
+    
     return (
       <div>
         <div>
